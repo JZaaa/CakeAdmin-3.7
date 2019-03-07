@@ -1,0 +1,67 @@
+@import "../variables";
+
+@coreColor: #009688;
+@green: green;
+@blue: #428bca;
+@black: #000;
+@red: #e10050;
+@orange: #FF6600;
+/* bootstrap color */
+@success: #5cb85c;
+@info: #5bc0de;
+@primary: darken(#428bca, 6.5%);
+@warning: #f0ad4e;
+@danger: #d9534f;
+
+// button 样式
+.button-variant(@color; @background) {
+  color: @color;
+  background-color: @background;
+  border-color:fade(@color, 50%);
+
+  &:active, &.active, &:hover {
+    border-color: @color;
+    background-color:fade(@color, 8%);
+  }
+
+  &.flat {
+    border: 0;
+    background-color: transparent;
+    color: @color;
+
+    &:active, &.active, &:hover {
+      background-color: fade(lighten(@color, 10%), 20%);
+    }
+
+  }
+
+  &:focus, &.focus {
+    box-shadow: 0 0 0 0 fade(lighten(@color, 10%), 50%);
+  }
+}
+
+.button-variant-bs(@color) {
+  color: #fff;
+  background-color: @color;
+  border-color:fade(@color, 50%);
+
+  &:active, &.active, &:hover {
+    border-color: @color;
+    background-color: darken(@color, 8%);
+  }
+
+  &.flat {
+    border: 0;
+    background-color: transparent;
+    color: @color;
+
+    &:active, &.active, &:hover {
+      background-color: fade(lighten(@color, 10%), 20%);
+    }
+
+  }
+
+  &:focus, &.focus {
+    box-shadow: 0 0 0 0 fade(lighten(@color, 10%), 50%);
+  }
+}
