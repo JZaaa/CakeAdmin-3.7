@@ -95,7 +95,7 @@ class RolesController extends AppController
             $saveData['menus'] = json_encode($menus);
             $role = $this->Roles->patchEntity($role, $saveData);
             if ($this->Roles->save($role)) {
-                return $this->jump(200, '保存成功!', 'false', true);
+                return $this->jump(200, '保存成功!', false, true);
             } else {
                 return $this->getError($role);
             }

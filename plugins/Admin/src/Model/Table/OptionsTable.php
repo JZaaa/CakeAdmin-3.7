@@ -67,10 +67,6 @@ class OptionsTable extends Table
             ->maxLength('type', 50, '分类超出长度')
             ->allowEmptyString('type');
 
-        $validator
-            ->scalar('autoload')
-            ->maxLength('autoload', 20, '自动加载超出长度')
-            ->allowEmptyString('autoload');
 
         return $validator;
     }

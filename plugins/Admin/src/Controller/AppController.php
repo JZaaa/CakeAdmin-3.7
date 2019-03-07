@@ -76,7 +76,7 @@ class AppController extends BaseController
         }
         $result['statusCode'] = empty($statusCode) ? 200 : $statusCode;
         $result['message'] = $message;
-        $result['tabid'] = strtolower($tabid);
+        $result['tabid'] = is_string($tabid) ? strtolower($tabid) : !!$tabid;
         $result['forward'] = $forward;
         $result['dialogid'] = $dialogid;
         $result['divid'] = $divid;

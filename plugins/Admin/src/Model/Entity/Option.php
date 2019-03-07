@@ -11,7 +11,6 @@ use Cake\ORM\Entity;
  * @property string|null $field
  * @property string|null $value
  * @property string|null $type
- * @property string|null $autoload
  */
 class Option extends Entity
 {
@@ -29,7 +28,6 @@ class Option extends Entity
         'name' => true,
         'field' => true,
         'value' => true,
-        'type' => true,
-        'autoload' => true
+        'type' => true
     ];
 }

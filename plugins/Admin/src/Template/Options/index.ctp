@@ -29,7 +29,7 @@
     </ul>
     <div class="tab-content">
         <div class="tab-pane fade <?php if (empty($type) || $type == 'system') {echo 'active in';}?>" id="system">
-            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'system']);?>" class="pageForm" data-toggle="validate" data-reloadNavtab="ture" >
+            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'system']);?>" class="pageForm" data-toggle="validate">
                 <table class="table table-condensed">
                     <tbody>
                     <tr>
@@ -97,7 +97,7 @@
             </form>
         </div>
         <div class="tab-pane fade <?php if ($type == 'site') {echo 'active in';}?>" id="site">
-            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'site']);?>" class="pageForm" data-toggle="validate" data-reloadNavtab="ture" >
+            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'site']);?>" class="pageForm" data-toggle="validate">
                 <table class="table table-condensed">
                     <tbody>
                     <tr>
@@ -141,7 +141,7 @@
             </form>
         </div>
         <div class="tab-pane fade <?php if ($type == 'other') {echo 'active in';}?>" id="other">
-            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'other']);?>" class="pageForm" data-toggle="validate" data-reloadNavtab="ture" >
+            <form action="<?php echo $this->Url->build(['plugin' => $this->request->params['plugin'], 'controller' => 'Options', 'action' => 'index', 'other']);?>" class="pageForm" data-toggle="validate">
                 <table class="table table-condensed">
                     <tbody>
                     <tr>
