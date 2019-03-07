@@ -28,6 +28,26 @@ Linux系统可能会出现文件权限的问题，请给以下文件与子文件
 /webroot/assets/b-jui/BJUI/plugins/kindeditor/attached
 ````
 
+### 生产环境部署
+- 设置`debug=false`
+- 推荐文档根目录设置为`webroot`
+- 【可选】composer重新加载类以优化项目加载速度
+```
+php composer dumpautoload -o
+``` 
+- 【可选】涉及到类的静态文件，运行以下命令之一以优化速度
+```
+// 以 符号链接 形式创建静态文件
+bin/cake plugin assets symlink
+// 若不支持 符合链接，用此命令复制静态文件
+bin/cake plugin assets copy
+```
+- 清除缓存
+```
+bin/cake schema_cache clear
+bin/cake cache clear_all
+```
+
 ### 其他
 - `DebugKit`默认未启用，启用请修改`Application.php`文件对应代码
 - `csrf` 组件默认已关闭，启用请在`routes.php` 添加相关代码
