@@ -7,6 +7,8 @@ use App\Controller\AppController as BaseController;
 class AppController extends BaseController
 {
 
+    public $limit = 20; //每页显示条数
+
     public function initialize()
     {
         parent::initialize();
@@ -36,8 +38,6 @@ class AppController extends BaseController
             echo '网站异常！';
             exit;
         }
-
-        $this->limit = 20;  //每页显示条数
 
         $this->viewBuilder()->setLayout('ajax');
 
